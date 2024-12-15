@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroniX</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            justify-content: space-between;
+            font-family: 'Arial', sans-serif;
+            background-color: #000; /* Black background */
+            background-image: url('img/space.jpeg'); 
+            background-repeat: repeat-x;
+            background-size: 40%; 
+            background-position: center;
+            background-repeat: repeat ;
+            color: #fff; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .images {
+            display: flex;
+            position: absolute;
+            left: 1;
+            right: 1;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: -1;
+            background-color: rgba(78, 0, 128, 0.3); /* Add your desired background color here */
+            padding: 1px; /* Adjust padding as needed */
+            border-radius: 50px;
+        }
+
+        .left-image
+         {
+            width: 300px; 
+            height: 300px; 
+            margin: 0 0px;
+            margin-right: 5 0px;
+            border-radius: 0%;
+            align-self: center;
+            overflow: hidden;
+        }
+        .right-image {
+            width: 300px; 
+            height: 300px;
+            margin: 0 0px;
+            margin-left: 700px;
+             
+            border-radius: 0%;
+            align-self: center;
+            overflow: hidden;
+        }
+
+        .left-image img,
+        .right-image img {
+            width: 100%; /* Ensure the image takes the full width of the container */
+            height: 100%; /* Ensure the image takes the full height of the container */
+            object-fit: cover; /* Maintain the aspect ratio and cover the entire container */
+            filter: brightness(67%);
+        }
+
+        .partition {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent white background */
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Box shadow for a subtle border */
+        }
+
+        .container {
+            text-align: center;
+            color: purple;
+        }
+
+        h1 {
+            color: #8e44ad; /* Purple color */
+            font-size: 120px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .menu-container {
+            background-color: black; /* Semi-transparent black background */
+            padding: 15px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .menu a {
+            color: #8e44ad;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .menu a:hover {
+            color: white; /* Purple color on hover */
+        }
+
+        .get-started-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            background-color: #8e44ad; 
+            border-radius: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .get-started-btn:hover {
+            background-color: white; 
+        }
+    </style>
+</head>
+<body>
+    <div class="images">
+        <div class="left-image">
+            <img src="img/lap6.png" alt="Left Image">
+        </div>
+        <div class="right-image">
+            <img src="img/gaming.png" alt="Right Image">
+        </div>
+    </div>
+    <div class="partition">
+        <div class="container">
+            <div class="menu-container">
+                <div class="menu">
+                    <a href="contact.html">Contact Us</a>
+                    <a href="services.html">About Us</a>
+                    <a href="https://www.google.com/maps/place/ElectroniXx+GmbH/@51.3525833,7.0729897,17z/data=!3m1!4b1!4m6!3m5!1s0x47b8dbc83ccaee07:0x9c386563eb1e87c!8m2!3d51.35258!4d7.07557!16s%2Fg%2F1tfbxk69?entry=ttu" target="_blank">Location</a>
+                </div>
+            </div>
+            <h1>Welcome to <br> ElectroniX!</h1>
+            <br><br><br>
+            <a href="site.html" class="get-started-btn"  target="_blank">Get Started!</a>
+            
+        </div>
+    </div>
+</body>
+</html>

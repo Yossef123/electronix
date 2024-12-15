@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - ElectroniX Shop</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black; /*Change the background color to black */
+            color: purple; /* Change text color to purple */
+        }
+
+        header {
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #220230;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+        }
+
+        form {
+            display: grid;
+            grid-gap: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #000000;
+            color: #fff;
+            padding: 15px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #000000;
+        }
+
+        .error {
+            color: #ff0000;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body background="img/space.jpeg">
+
+    <header>
+        <h1>Contact Us - Electronics Shop</h1>
+    </header>
+
+    <section>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <p class="error" id="errorMsg"></p>
+
+            <button type="button" onclick="validateForm()">Submit</button>
+        </form>
+    </section>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+            var errorMsg = document.getElementById('errorMsg');
+
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            // Simple validation
+            if (name.trim() === '' || message.trim() === '') {
+                errorMsg.textContent = 'To send us a message, please enter your Name and your Message';
+            } else if (!emailPattern.test(email)) {
+                errorMsg.textContent = 'Please enter a valid email address';
+            } else {
+                // Form is valid, you can submit it or perform other actions
+                alert('Form submitted successfully!');
+                // Clear the form
+                document.getElementById('contactForm').reset();
+                errorMsg.textContent = '';
+            }
+        }
+    </script>
+
+</body>
+</html>
